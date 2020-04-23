@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+
+	<head>
+	<meta charset="utf-8">
+	<!-- head does not display-->
+		<title>home</title>
+	
+	<!-- Video.js -->
+	  <link href="http://vjs.zencdn.net/6.2.7/video-js.css" rel="stylesheet">
+
+  <!-- If you'd like to support IE8 -->
+  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+	
+	</head>
+	
+	<style>
+	
+	*{
+		margin: auto;
+		padding: 0;
+	}
+	
+	header{
+		background-color: black;
+		color: white;
+		padding-top: 0.5em;
+		padding-bottom: 1em;
+	}
+	
+	body{
+		background-image: url("image/fractal-1224853_1280.jpg");
+		text-align: center;
+	}
+
+	#sidebar{
+		text-align: center;
+		background-color: white;
+		width: 23%;
+		float: left;
+		border: solid thick;
+		margin-top: 2em;
+	}
+
+	#main{
+		float: right;
+		width: 75%;
+		padding-top: 2em;
+	}
+	
+	#wrapper{
+		background-color: white;
+		width: 800px;
+		padding-bottom: 75%;
+	}
+	
+	#footer{
+		background-color: white;
+		color: black;
+		margin: auto;
+		width: 75%;
+		padding: 0;
+		float: right;
+		padding-top: 2em;
+	}
+	
+
+	</style>
+	
+	
+	
+	<body>
+	<div id = "wrapper">	
+		<header>
+			<u><h1>Kmoonpage.com</h1></u>
+		</header>
+	
+		<content id = "main">
+<br>
+		<h1>HTML5 video player</h1>
+		<video width="320" height="240" controls>
+  <source src="cat.mp4" type="video/mp4">
+  <source src="cat.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+<br>		
+	
+	<h1> html5 player "alternate video type example .ogv" </h1>
+	
+<br>	
+		<video id="sampleMovie" src="big_buck_bunny.ogv" controls></video>
+</video>
+<br>	
+
+	<br>
+	
+		<h1> Youtube player "auto play" & "Playlist" </h1>
+<br>	
+	<iframe width="420" height="315"
+src="https://www.youtube.com/embed/watch?v=TgqiSBxvdws&list=PLwgRxxvjwZFLYJ8PXvHj5QYMV5HvleeKA&autoplay=1&loop=1">
+</iframe>
+
+	<br>	
+
+	<h1> Video JS </h1>
+	<br>
+	  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+  poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+    <source src="cat.mp4" type='video/mp4'>
+    <source src="cat.webm" type='video/webm'>
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+  
+	<script src="http://vjs.zencdn.net/6.2.7/video.js"></script>
+  
+  <br>
+  
+  <h1> Video for everybody </h1>
+  <video width="640" height="360" controls>
+	<!-- MP4 must be first for iPad! -->
+	<source src="cat.MP4" type="video/mp4" /><!-- Safari / iOS video    -->
+	<source src="cat.OGV" type="video/ogg" /><!-- Firefox / Opera / Chrome10 -->
+	<!-- fallback to Flash: -->
+	<object width="640" height="360" type="application/x-shockwave-flash" data="__FLASH__.SWF">
+		<!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
+		<param name="movie" value="__FLASH__.SWF" />
+		<param name="flashvars" value="controlbar=over&amp;image=__POSTER__.JPG&amp;file=cat.MP4" />
+		<!-- fallback image. note the title field below, put the title of the video there -->
+		<img src="__VIDEO__.JPG" width="640" height="360" alt="__TITLE__"
+		     title="No video playback capabilities, please download the video below" />
+	</object>
+</video>
+<!-- you *must* offer a download link as they may be able to play the file locally. customise this bit all you want -->
+<p>	
+</p>
+  
+
+		</content>
+
+		<content id = "sidebar">
+
+
+		</content>
+	
+	<content id ="footer">
+		footer
+	</content>
+</div>	
+	</body>
+
+</html>

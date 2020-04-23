@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+
+	<head>
+	<meta charset="utf-8">
+	<!-- head does not display-->
+		<title>home</title>
+	
+	
+	
+	</head>
+	
+	<style>
+	
+	*{
+		margin: auto;
+		padding: 0;
+	}
+	
+	header{
+		background-color: black;
+		color: white;
+		padding-top: 0.5em;
+		padding-bottom: 1em;
+	}
+	
+	body{
+		background-image: url("image/fractal-1224853_1280.jpg");
+		text-align: center;
+	}
+
+	#sidebar{
+		text-align: center;
+		background-color: white;
+		width: 23%;
+		float: left;
+		border: solid thick;
+		margin-top: 2em;
+	}
+
+	#main{
+		float: right;
+		width: 75%;
+		padding-top: 2em;
+	}
+	
+	#wrapper{
+		background-color: white;
+		width: 800px;
+		padding-bottom: 75%;
+	}
+	
+	#footer{
+		background-color: white;
+		color: black;
+		margin: auto;
+		width: 75%;
+		padding: 0;
+		float: right;
+		padding-top: 2em;
+	}
+	
+
+	</style>
+	
+	<body>
+	<div id = "wrapper">	
+		<header>
+			<u><h1>Kmoonpage.com</h1></u>
+		</header>
+	
+		<content id = "main">
+
+		
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<img src = "ModernSport05.Front_large.jpg" width="100" height="150">
+<div id="paypal-button-container"></div>
+
+<script>
+
+    // Render the PayPal button
+
+    paypal.Button.render({
+
+        // Set your environment
+
+        env: 'sandbox', // sandbox | production
+
+        // PayPal Client IDs - replace with your own
+        // Create a PayPal app: https://developer.paypal.com/developer/applications/create
+
+        client: {
+            sandbox:    'AQ0AygIPTt3ycGUFOsHsL0Rww1iHY2HnqLFG8RTrFzuIyRzf_Se8dJVhQfwvpdQXxV7A2BGxcQl6LO-O',
+            production: '<insert production client id>'
+        },
+
+        // Wait for the PayPal button to be clicked
+
+        payment: function(data, actions) {
+
+            // Make a client-side call to the REST api to create the payment
+
+            return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '4.99', currency: 'USD' }
+                        }
+                    ]
+                },
+
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+            });
+        },
+
+        // Wait for the payment to be authorized by the customer
+
+        onAuthorize: function(data, actions) {
+
+            // Execute the payment
+
+            return actions.payment.execute().then(function() {
+                window.alert('Payment Complete!');
+            });
+        }
+
+    }, '#paypal-button-container');
+
+</script>
+    
+		
+		</content>
+
+		<content id = "sidebar">
+		
+
+
+		</content>
+	
+	<content id ="footer">
+		footer
+	</content>
+</div>	
+	</body>
+
+</html>

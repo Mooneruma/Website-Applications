@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+	<head>
+	<meta charset="utf-8">
+	<!-- head does not display-->
+		<title>home</title>
+	
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Popularity'],
+          ['Germany', 200],
+          ['United States', 300],
+          ['Brazil', 400],
+          ['Canada', 500],
+          ['France', 600],
+          ['RU', 700]
+        ]);
+
+        var options = {};
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+	</head>
+	
+	<style>
+	
+	*{
+		margin: auto;
+		padding: 0;
+	}
+	
+	header{
+		background-color: black;
+		color: white;
+		padding-top: 0.5em;
+		padding-bottom: 1em;
+	}
+	
+	body{
+		background-image: url("image/fractal-1224853_1280.jpg");
+		text-align: center;
+	}
+
+	#sidebar{
+		text-align: center;
+		background-color: white;
+		width: 23%;
+		float: left;
+		border: solid thick;
+		margin-top: 2em;
+	}
+
+	#main{
+		float: right;
+		width: 75%;
+		padding-top: 2em;
+	}
+	
+	#wrapper{
+		background-color: white;
+		width: 800px;
+		padding-bottom: 75%;
+	}
+	
+	#footer{
+		background-color: white;
+		color: black;
+		margin: auto;
+		width: 75%;
+		padding: 0;
+		float: right;
+		padding-top: 2em;
+	}
+	
+
+	</style>
+	
+	<body>
+	<div id = "wrapper">	
+		<header>
+			<u><h1>Kmoonpage.com</h1></u>
+		</header>
+	
+		<content id = "main">
+
+    <div id="regions_div" style="width: 450px; height: 250px;"></div>
+
+		
+		</content>
+
+		<content id = "sidebar">
+
+
+		</content>
+	
+	<content id ="footer">
+		footer
+	</content>
+</div>	
+	</body>
+
+</html>
